@@ -30,7 +30,25 @@ while True:
             print('Conversão para Binário\n')
         elif (opt == 2):
             # código da conversão Octadecimal
-            print('Conversão para Octadecimal\n')
+
+            # Reservar variável para utilizar depois
+            octa = ''
+
+            # Variável de backup
+            temp = decimal
+
+            # Iniciar repetição enquanto meu decimal for maior que 0
+            while decimal > 0:
+
+                # Fracionamento da base octal
+                octa = str(decimal%8) + octa 
+
+                # Resto da divisão  
+                decimal = decimal//8
+
+            # Resultado
+            print(f"O decimal \033[34m{temp}\033[0;0m é igual ao Octadecimal {octa}\n")
+            
         elif (opt == 3):
             # código da conversão Hexadecimal
             print('Conversão para Hexadecimal\n')
