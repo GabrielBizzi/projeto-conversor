@@ -27,8 +27,17 @@ while True:
         # Condicional para verificar o valor do menu escolhido pelo usuário
         if (opt == 1):
             # código da conversão Binária
-            print('Conversão para Binário\n')
+           bin = ''
+           temp = decimal 
+
+           while decimal > 0:
+
+                bin = str(decimal%2) + bin
+                decimal = decimal//2
+
+           print(f'O decimal {temp} é igual ao binário {bin}.')
         elif (opt == 2):
+        
             # código da conversão Octadecimal
 
             # Reservar variável para utilizar depois
