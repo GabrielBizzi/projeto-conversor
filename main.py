@@ -60,8 +60,26 @@ while True:
             
         elif (opt == 3):
             # código da conversão Hexadecimal
-            print('Conversão para Hexadecimal\n')
+            conversion_table = {0: '0', 1: '1', 2:  '2', 3: '3', 4: '4',
+                                5: '5', 6: '6', 7: '7',
+                                8: '8', 9: '9', 10: 'A', 11: 'B', 12: 'C',
+                                13: 'D', 14: 'E', 15: 'F'}
 
+
+            hexa = ''
+            hexadecimal = ''
+
+            temp = decimal
+
+
+            while(decimal > 0):
+                hexa = decimal % 16
+                hexadecimal = conversion_table[hexa] + hexadecimal
+                decimal = decimal //16
+
+
+
+            print(f"O decimal \033[34m{temp}\033[0;0m é igual ao hexadecimal {hexadecimal}\n")
     # Caso desligue
     elif (confirm == 'n'):
         # Fecha o código

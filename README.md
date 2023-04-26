@@ -7,4 +7,4 @@ Este repositório é para fins acadêmicos, não sendo considerado como portfól
 * Gabriel Bizzi
 * Manuella Caputo
 * Gustavo Feitosa
-* Kaua de Silva
+* Kauã da Silva
