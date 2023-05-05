@@ -1,5 +1,5 @@
 # Important biblioteca do sistema operacional
-import os
+import os, time
 # Excutando comando do sistema para limpar o terminal
 os.system('cls' or 'clear')
 
@@ -7,27 +7,33 @@ os.system('cls' or 'clear')
 while True:
     # Variável de ligar/desligar
      print('Olá! Escolha apenas entre as opções fornecidas.\n')
-     print('[1] Iniciar Conversor')
-     print('[2] Informações')
-     print('[3] Sair\n')
+     print('\033[34m[1]\033[0;0m Iniciar Conversor')
+     print('\033[34m[2]\033[0;0m Informações')
+     print('\033[34m[3]\033[0;0m Sair\n')
      confirm = int(input("Digite uma opção do menu apresentado: "))
 
     # Caso ligar
      if (confirm== 1):
+        os.system('cls')
         # Pedir numero da decimal
         decimal = int(input('\nDigite o número decimal para realizar as conversões: '))
         # Apresenta uma informação
         print('\n\033[34m[i]\033[0;0m Escolha apenas entre as opções fornecidas (digite o número da opção desejada).\n')
         # Apresenta as opções
-        print('[1] Converter para Binário')
-        print('[2] Converter para Octadecimal')
-        print('[3] Converter para Hexadecimal\n')
+        print('\033[34m[1]\033[0;0m Converter para Binário')
+        print('\033[34m[2]\033[0;0m Converter para Octadecimal')
+        print('\033[34m[3]\033[0;0m Converter para Hexadecimal\n')
 
         # Armazena a opção escolhida
         opt = int(input('Digite uma das opções: '))
 
+        os.system('cls')
+
         # Mostra uma mensagem de funcionamento para o usuário
         print('\n\033[32mRealizando conversão...\033[0;0m\n')
+
+        time.sleep(2)
+        os.system('cls')
 
         # Condicional para verificar o valor do menu escolhido pelo usuário
         if (opt == 1):
@@ -40,7 +46,7 @@ while True:
                 bin = str(decimal%2) + bin
                 decimal = decimal//2
 
-           print(f'O decimal {temp} é igual ao binário {bin}.\n')
+           print(f'O decimal \033[34m{temp}\033[0;0m é igual ao binário {bin}.\n')
            input('Pressione "Enter" para continuar')
            os.system('cls')
 
@@ -96,15 +102,17 @@ while True:
     # Caso desligue
      elif (confirm == 2):
         # Informações do trabalho
+             os.system('cls')
              print('Escolha apenas entre as opções fornecidas.\n')
-             print('[1] Curso')
-             print('[2] Componentes do grupo')
-             print('[3] Disciplinas envolvidas')
-             print('[4] Versão do aplicativo\n')
+             print('\033[34m[1]\033[0;0m Curso')
+             print('\033[34m[2]\033[0;0m Componentes do grupo')
+             print('\033[34m[3]\033[0;0m Disciplinas envolvidas')
+             print('\033[34m[4]\033[0;0m Versão do aplicativo\n')
              confirm_2 = int(input("Digite uma opção do menu apresentado: "))
+             os.system('cls')
 
              if (confirm_2== 1):
-              print('\nCiência da Computação - Universidade Cruzeiro do Sul\n')
+              print('\n\033[32mCiência da Computação - Universidade Cruzeiro do Sul\033[0;0m\n')
               input('Pressione "Enter" para continuar')
               os.system('cls')
 
@@ -119,12 +127,12 @@ while True:
                 os.system('cls')
                 
              elif(confirm_2== 3):
-                 print('\nProgramação de Computadores\n')
+                 print('\n\033[32mProgramação de Computadores\033[0;0m\n')
                  input('Pressione "Enter" para continuar')
                  os.system('cls')
 
              elif(confirm_2== 4):
-                 print('\nv1.0.5\n')
+                 print('\n\033[32mv1.0.5\033[0;0m\n')
                  input('Pressione "Enter" para continuar')
                  os.system('cls')
      
