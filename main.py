@@ -6,9 +6,14 @@ os.system('cls' or 'clear')
 # Iniciando estrutura de repetição para apresentação do menu
 while True:
     # Variável de ligar/desligar
-    confirm = input('Iniciar o conversor? (y/n): ')
+     print('Olá! Escolha apenas entre as opções fornecidas.\n')
+     print('[1] Iniciar Conversor')
+     print('[2] Informações')
+     print('[3] Sair\n')
+     confirm = int(input("Digite uma opção do menu apresentado: "))
+
     # Caso ligar
-    if (confirm == 'y'):
+     if (confirm== 1):
         # Pedir numero da decimal
         decimal = int(input('\nDigite o número decimal para realizar as conversões: '))
         # Apresenta uma informação
@@ -35,7 +40,10 @@ while True:
                 bin = str(decimal%2) + bin
                 decimal = decimal//2
 
-           print(f'O decimal {temp} é igual ao binário {bin}.')
+           print(f'O decimal {temp} é igual ao binário {bin}.\n')
+           input('Pressione "Enter" para continuar')
+           os.system('cls')
+
         elif (opt == 2):
         
             # código da conversão Octadecimal
@@ -57,6 +65,8 @@ while True:
 
             # Resultado
             print(f"O decimal \033[34m{temp}\033[0;0m é igual ao Octadecimal {octa}\n")
+            input('Pressione "Enter" para continuar')
+            os.system('cls')
             
         elif (opt == 3):
             # código da conversão Hexadecimal
@@ -80,14 +90,51 @@ while True:
 
 
             print(f"O decimal \033[34m{temp}\033[0;0m é igual ao hexadecimal {hexadecimal}\n")
+            input('Pressione "Enter" para continuar')
+            os.system('cls')
+
     # Caso desligue
-    elif (confirm == 'n'):
+     elif (confirm == 2):
+        # Informações do trabalho
+             print('Escolha apenas entre as opções fornecidas.\n')
+             print('[1] Curso')
+             print('[2] Componentes do grupo')
+             print('[3] Disciplinas envolvidas')
+             print('[4] Versão do aplicativo\n')
+             confirm_2 = int(input("Digite uma opção do menu apresentado: "))
+
+             if (confirm_2== 1):
+              print('\nCiência da Computação - Universidade Cruzeiro do Sul\n')
+              input('Pressione "Enter" para continuar')
+              os.system('cls')
+
+             elif (confirm_2== 2):
+                print("""
+                Gabriel Bizzi
+                Gustavo Feitosa
+                kauã Aquino
+                Manuella Caputo
+                Pietra Duccini\n""")
+                input('Pressione "Enter" para continuar')
+                os.system('cls')
+                
+             elif(confirm_2== 3):
+                 print('\nProgramação de Computadores\n')
+                 input('Pressione "Enter" para continuar')
+                 os.system('cls')
+
+             elif(confirm_2== 4):
+                 print('\nv1.0.5\n')
+                 input('Pressione "Enter" para continuar')
+                 os.system('cls')
+     
+     elif (confirm == 3):
         # Fecha o código
         break
     # Opção inválida
-    else:
+     else:
         # Mensagem
-        print('Digite "y" para sim e "n" para não')
+        print('Digite uma das opções apresentadas')
         # Continuar o código e reiniciar a repetição
         continue
                     
